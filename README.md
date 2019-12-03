@@ -6,17 +6,21 @@ Login&amp;UploadImage Simple Server in Flask
 
 *datebase init*
 
-`python manage.py db init`
-`python manage.py db migrate`
-`python manage.py db upgrade`
+```
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+```
 
 *add user*
 
-`python manage.py shell`
-`>> user = User('admin')`
-`>> user.password = 'password'`
-`>> db.session.add(user)`
-`>> db.session.commit()`
+```
+python manage.py shell
+>> user = User('admin')
+>> user.password = 'password'
+>> db.session.add(user)
+>> db.session.commit()
+```
 
 
 *run server*
