@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: Li Qin
-# @Date:   2019-12-02 10:52:14
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 20:37:39
+
 from .paths import AUTH_PRE
 from .paths import MAIN_PRE
 from .paths import API_PRE

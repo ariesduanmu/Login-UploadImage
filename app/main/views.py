@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: ariesduanmu
-# @Date:   2019-03-31 01:17:51
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 20:38:04
+
 import os
 import requests
 
@@ -19,6 +16,7 @@ from . import main
 
 from .forms import ImportDataForm
 
+from config.paths import MAIN_INDEX
 from config.paths import MAIN_UPLOAD
 
 from sql import db
@@ -28,8 +26,15 @@ from app.utils.upload_utils import allowed_file
 
 from app.utils.flash_utils import FAID_UPLOAD_DATA
 
+INDEX_HTML = 'index.html'
 UPLOAD_HTML = 'main/upload.html'
 SUCCESS_HTML = 'main/success.html'
+
+@main.route(MAIN_INDEX, methods=['GET'])
+@login_required
+def index():
+    return render_template(INDEX_HTML)
+
 
 @main.route(MAIN_UPLOAD, methods=['GET','POST'])
 @login_required
@@ -39,8 +44,12 @@ def upload():
         picture_data = form.picture.data
         info_data = form.info.data
         user_id = current_user.id
-        if picture_data and allowed_file(picture_data.filename):
-            picturename = secure_filename(picture_data.filename)
+
+        picture_data_filename = picture_data.filename
+        print(allowed_file(picture_data.filename))
+
+        if picture_data and allowed_file(picture_data_filename):
+            picturename = secure_filename(picture_data_filename)
             picture_path = os.path.join(current_app.config['UPLOAD_FOLDER'], picturename)
             picture_data.save(picture_path)
             data = ImportData(info_data, picture_path, user_id)

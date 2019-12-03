@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: ariesduanmu
-# @Date:   2019-03-31 00:21:20
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 10:51:38
+
 from flask import current_app
 
 from werkzeug.security import generate_password_hash

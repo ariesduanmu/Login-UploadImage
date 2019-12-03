@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author: ariesduanmu
-# @Date:   2019-03-31 17:16:40
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 20:37:52
 from flask import g
 
 from sql.user import User

@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: ariesduanmu
-# @Date:   2019-03-30 22:54:12
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 11:26:22
+
 from flask import Flask
 
 from sql import db

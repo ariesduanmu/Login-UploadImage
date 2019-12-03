@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Author: Li Qin
-# @Date:   2019-12-02 20:36:08
-# @Last Modified by:   Li Qin
-# @Last Modified time: 2019-12-02 20:37:00
+
 
 MAIN_PRE = '/'
+MAIN_INDEX = '/'
 MAIN_UPLOAD = '/upload'
 
 AUTH_PRE = '/auth'
