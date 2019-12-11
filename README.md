@@ -25,7 +25,7 @@ python manage.py shell
 
 *run server*
 
-`python manage.py`
+`python manage.py server`
 
 *browser*
 
